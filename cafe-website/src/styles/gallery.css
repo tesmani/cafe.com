@@ -1,0 +1,123 @@
+/* gallery.css */
+
+.gallery {
+  background: #080808;
+  padding: 120px 5%;
+  text-align: center;
+}
+
+.gallery-header {
+  margin-bottom: 60px;
+}
+
+.gallery-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.gallery-header h2 em {
+  font-style: italic;
+  color: #c59d5f;
+  font-weight: 300;
+}
+
+/* 1. Mosaic Grid Layout */
+.gallery-mosaic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px; /* Base height for rows */
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+  border-radius: 0; /* Premium look often uses sharp or very subtle edges */
+}
+
+/* 2. Positioning the different sizes */
+.tall {
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.small {
+  grid-column: span 1;
+}
+
+/* 3. Image Styling */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+  filter: brightness(0.8);
+}
+
+/* 4. Luxury Hover Overlay */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(197, 157, 95, 0.2); /* Subtle gold tint */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.img-overlay span {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .img-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover .img-overlay span {
+  transform: translateY(0);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .gallery-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-mosaic {
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-item {
+    height: 350px;
+  }
+}

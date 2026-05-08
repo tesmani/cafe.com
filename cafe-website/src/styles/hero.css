@@ -1,0 +1,148 @@
+/* hero.css */
+
+/* 1. Base Section Styling */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* Using a more moody coffee image by default */
+  background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* 2. Premium Gradient Overlay (Darkens left side for text readability) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(10, 10, 10, 0.9) 0%, 
+    rgba(10, 10, 10, 0.6) 40%, 
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* 3. Layout Container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding-left: 10%; /* Creates luxurious breathing room */
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* 4. The Subtitle (Small detail, huge impact) */
+.hero-subtitle {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 0.85rem;
+  color: #c59d5f; /* Your signature gold */
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* 5. Main Heading - Use a Serif font here if possible */
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem); /* Responsive sizing */
+  line-height: 1.1;
+  margin-bottom: 25px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: #f1f1f1;
+}
+
+/* 6. Description Text */
+.hero p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+/* 7. The Buttons */
+.hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.hero button {
+  padding: 16px 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #c59d5f;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+/* Primary Button (Solid) */
+.btn-primary {
+  background: #c59d5f;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: #c59d5f;
+}
+
+/* Secondary Button (Outline) */
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+  border-color: white !important;
+}
+
+/* 8. Subtle Animation for Entry */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-left: 5%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .hero::before {
+    background: rgba(0, 0, 0, 0.6); /* Even dark overlay for mobile */
+  }
+}

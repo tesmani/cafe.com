@@ -1,0 +1,122 @@
+/* about.css */
+
+.about {
+  background: #0a0a0a; /* Pure deep black for elegance */
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* 1. Image Styling with Accents */
+.about-image-wrapper {
+  position: relative;
+  padding: 20px;
+}
+
+.main-about-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  filter: grayscale(20%); /* Muted colors feel more premium */
+}
+
+.image-accent-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  border: 2px solid #c59d5f;
+  z-index: 1;
+}
+
+.image-experience-tag {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  background: #c59d5f;
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+/* 2. Typography & Content */
+.section-subtitle {
+  display: block;
+  color: #c59d5f;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+}
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.about-text h2 em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-text p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* 3. The "Signature" touch */
+.signature {
+  margin-top: 40px;
+  border-top: 1px solid rgba(197, 157, 95, 0.3);
+  padding-top: 20px;
+}
+
+.owner-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #c59d5f;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 968px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .image-accent-border {
+    display: none;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+  }
+}

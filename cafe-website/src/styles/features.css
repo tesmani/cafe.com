@@ -1,0 +1,111 @@
+/* features.css */
+
+.features {
+  background: #080808; /* Deepest black */
+  padding: 120px 5%;
+  text-align: center;
+}
+
+.features-header {
+  margin-bottom: 80px;
+}
+
+.section-subtitle {
+  display: block;
+  color: #c59d5f;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+}
+
+.features h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.features h2 em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* 1. Container and Card Layout */
+.features-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02); /* Very subtle card tint */
+  padding: 60px 40px;
+  width: 320px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+
+/* 2. Numerical Marker (Modern touch) */
+.feature-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #c59d5f;
+  display: block;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* 3. Content Styling */
+.feature-card h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.feature-card p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* 4. The Hover Effect - Bottom border expansion */
+.feature-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #c59d5f;
+  transition: width 0.4s ease;
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-10px);
+  border-color: rgba(197, 157, 95, 0.3);
+}
+
+.feature-card:hover .feature-border {
+  width: 100%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .features h2 {
+    font-size: 2.5rem;
+  }
+  .feature-card {
+    width: 100%;
+    padding: 40px 30px;
+  }
+}
