@@ -1,0 +1,133 @@
+.footer {
+  background-color: #0d0d0d;
+  color: #f1f1f1;
+  padding: 100px 10% 40px; /* Increased top padding */
+  font-family: 'Playfair Display', serif; 
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.footer-logo {
+  color: #c4a47c;
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.brand-tagline {
+  line-height: 1.8;
+  color: #888;
+  max-width: 250px;
+}
+
+.footer-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #c4a47c;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 15px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #a0a0a0;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.footer-section a:hover {
+  color: #c4a47c;
+  padding-left: 5px; /* Subtle slide effect */
+}
+
+/* Contact Styling */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #a0a0a0;
+}
+
+.footer-icon {
+  color: #c4a47c;
+  margin-top: 5px;
+}
+
+/* Social Row Styling */
+.social-icons-row {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons-row a {
+  font-size: 1.3rem;
+  color: #f1f1f1;
+  background: #1a1a1a;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+.social-icons-row a:hover {
+  background: #c4a47c;
+  color: #0d0d0d;
+  border-color: #c4a47c;
+  transform: translateY(-5px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid #1a1a1a;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.separator {
+  width: 1px;
+  height: 12px;
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .footer {
+    padding: 80px 5% 40px;
+  }
+}

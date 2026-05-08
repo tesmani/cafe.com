@@ -1,0 +1,78 @@
+.footer {
+  background-color: #0d0d0d; /* Matches the dark map section in image_19f2b9.jpg */
+  color: #f1f1f1;
+  padding: 80px 10% 40px; /* Generous padding for a luxury feel */
+  font-family: serif; 
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-logo {
+  color: #c4a47c; /* Gold/Bronze accent */
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #c4a47c;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #a0a0a0;
+  transition: 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #c4a47c;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.legal-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
